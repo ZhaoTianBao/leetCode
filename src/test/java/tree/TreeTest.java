@@ -146,6 +146,7 @@ public class TreeTest {
         //一个疑问，怎么字符窜 生成 N叉树结构 ？？？
         String treeStr = "[1,null,3,2]";
         //list 转 树
+
         TreeNode root = new TreeUtil().listToTree(treeStr);
         int minimumDifference = new DiameterOfBinaryTree().diameterOfBinaryTree(root);
         System.out.println(minimumDifference);
