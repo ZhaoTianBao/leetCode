@@ -100,4 +100,59 @@ public class TreeTest {
         List<String> list = new BinaryTreePaths().binaryTreePaths(root);
         System.out.println(list);
     }
+
+
+    @Test
+    public void test404(){
+        String treeStr = "[3,9,20,null,null,15,7]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        int i = new SumOfLeftLeaves().sumOfLeftLeaves(root);
+        System.out.println(i);
+    }
+
+    @Test
+    public void test501(){
+        //中序遍历 有序的
+        String treeStr = "[1,null,2,2]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        int[] mode = new FindMode().findMode(root);
+        System.out.println(mode);
+        for (int i = 0; i < mode.length; i++) {
+            System.out.println(mode[i]);
+        }
+    }
+
+    @Test
+    public void test530(){
+        //中序遍历 有序的
+        String treeStr = "[1,null,3,2]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        int minimumDifference = new GetMinimumDifference().getMinimumDifference(root);
+        System.out.println(minimumDifference);
+    }
+
+
+    @Test
+    public void test543(){
+        //中序遍历 有序的
+        String treeStr = "[1,null,3,2]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        int minimumDifference = new DiameterOfBinaryTree().diameterOfBinaryTree(root);
+        System.out.println(minimumDifference);
+    }
+
+    @Test
+    public void test559(){
+        //一个疑问，怎么字符窜 生成 N叉树结构 ？？？
+        String treeStr = "[1,null,3,2]";
+        //list 转 树
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        int minimumDifference = new DiameterOfBinaryTree().diameterOfBinaryTree(root);
+        System.out.println(minimumDifference);
+    }
+
+
+
+
+
 }
