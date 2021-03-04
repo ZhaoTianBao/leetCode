@@ -2,6 +2,7 @@ package tree;
 
 import com.myjava.common.TreeNode;
 import com.myjava.tree.*;
+import com.myjava.tree.ntree.NTreePostOrder;
 import com.myjava.utils.TreeUtil;
 import org.junit.Test;
 
@@ -152,7 +153,41 @@ public class TreeTest {
         System.out.println(minimumDifference);
     }
 
+    @Test
+    public void test563(){
+        //一个疑问，怎么字符窜 生成 N叉树结构 ？？？
+        String treeStr = "[1,2,3]";
+        //list 转 树
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        int tilt = new FindTilt().findTilt(root);
+        System.out.println(tilt);
+    }
 
+    @Test
+    public void test572(){
+        String s = "[3,4,5,1,2]";
+        TreeNode sNode = new TreeUtil().listToTree(s);
+        String t = "[4,1,2]";
+        TreeNode tNode = new TreeUtil().listToTree(t);
+        boolean subtree = new IsSubtree().isSubtree(sNode, tNode);
+        System.out.println(subtree);
+    }
+    @Test
+    public void test590(){
+//        String s = "[3,4,5,1,2]";
+//        TreeNode sNode = new TreeUtil().listToTree(s);
+//        boolean subtree = new IsSubtree().isSubtree(sNode, tNode);
+//        System.out.println(subtree);
+    }
+
+
+    @Test
+    public void test606(){
+        String treeStr = "[1,2,3,4]";
+        TreeNode treeNode = new TreeUtil().listToTree(treeStr);
+        String s1 = new Tree2str().tree2str(treeNode);
+        System.out.println(s1);
+    }
 
 
 

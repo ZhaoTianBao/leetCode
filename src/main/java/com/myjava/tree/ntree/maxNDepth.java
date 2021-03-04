@@ -1,4 +1,4 @@
-package com.myjava.tree;
+package com.myjava.tree.ntree;
 
 import com.myjava.common.NTreeNode;
 
