@@ -183,6 +183,7 @@ public class TreeTest {
 
     @Test
     public void test606(){
+
         String treeStr = "[1,2,3,4]";
         TreeNode treeNode = new TreeUtil().listToTree(treeStr);
         String s1 = new Tree2str().tree2str(treeNode);
