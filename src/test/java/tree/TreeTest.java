@@ -190,6 +190,54 @@ public class TreeTest {
         System.out.println(s1);
     }
 
+    @Test
+    public void test617(){
+        String tree1 = "[1,3,2,5]";
+        TreeNode treeNode1 = new TreeUtil().listToTree(tree1);
+        String tree2 = "[2,1,3,null,4,null,7]";
+        TreeNode treeNode2 = new TreeUtil().listToTree(tree2);
+        TreeNode treeNode = new MergeTrees().mergeTrees(treeNode1, treeNode2);
+        new TreeUtil().printTree(treeNode);
+    }
+
+    @Test
+    public void test637(){
+        String str = "[1,3,2,5]";
+        TreeNode treeNode = new TreeUtil().listToTree(str);
+        List<Double> doubles = new AverageOfLevels().averageOfLevels(treeNode);
+        System.out.println(doubles);
+    }
+
+
+    @Test
+    public void test653(){
+        String str = "[5,3,6,2,4,null,7]";
+        TreeNode treeNode = new TreeUtil().listToTree(str);
+        boolean bool = new FindTarget().findTarget(treeNode,9);
+        System.out.println(bool);
+    }
+
+
+    //https://github.com/ustcyyw/yyw_algorithm 其他人的git刷题库
+    @Test
+    public void test671(){
+        String str = "[2,2,5,null,null,5,7]";
+        TreeNode treeNode = new TreeUtil().listToTree(str);
+        int secondMinimumValue = new FindSecondMinimumValue().findSecondMinimumValue(treeNode);
+        System.out.println(secondMinimumValue);
+    }
+
+
+
+
+    @Test
+    public void test700(){
+        String str = "[4,2,7,1,3]";
+        TreeNode treeNode = new TreeUtil().listToTree(str);
+        TreeNode treeNode1 = new SearchBST().searchBST(treeNode, 2);
+        new TreeUtil().printTree(treeNode1);
+    }
+
 
 
 }
