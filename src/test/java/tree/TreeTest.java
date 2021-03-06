@@ -238,6 +238,57 @@ public class TreeTest {
         new TreeUtil().printTree(treeNode1);
     }
 
+    @Test
+    public void test783(){
+        String str = "[4,2,6,1,3]";
+        TreeNode treeNode = new TreeUtil().listToTree(str);
+        int i = new MinDiffInBST().minDiffInBST(treeNode);
+        System.out.println(i);
+    }
+
+
+
+    @Test
+    public void test872(){
+        //String tree1 = "[3,5,1,6,2,9,8,null,null,7,4]";
+        String tree1 = "[1,2,3]";
+        TreeNode treeNode1 = new TreeUtil().listToTree(tree1);
+        //String tree2 = "[3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]";
+        String tree2 = "[1,3,2]";
+        TreeNode treeNode2 = new TreeUtil().listToTree(tree2);
+        boolean b = new LeafSimilar().leafSimilar(treeNode1, treeNode2);
+        System.out.println(b);
+    }
+
+
+
+
+    @Test
+    public void test897(){
+        String str = "[4,2,7,1,3]";
+        TreeNode treeNode = new TreeUtil().listToTree(str);
+        TreeNode treeNode1 = new IncreasingBST().increasingBST(treeNode);
+        new TreeUtil().printTree(treeNode1);
+    }
+
+
+
+    @Test
+    public void test938(){
+        String str = "[10,5,15,3,7,null,18]";
+        TreeNode treeNode = new TreeUtil().listToTree(str);
+        int i = new RangeSumBST().rangeSumBST(treeNode, 7, 15);
+        System.out.println(i);
+    }
+
+
+    @Test
+    public void test965(){
+        String str = "[1,1,1,1,1,null,1]";
+        TreeNode treeNode = new TreeUtil().listToTree(str);
+        boolean univalTree = new IsUnivalTree().isUnivalTree(treeNode);
+        System.out.println(univalTree);
+    }
 
 
 }
