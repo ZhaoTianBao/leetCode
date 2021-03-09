@@ -1,8 +1,7 @@
 package tree;
 
 import com.myjava.common.TreeNode;
-import com.myjava.tree.*;
-import com.myjava.tree.ntree.NTreePostOrder;
+import com.myjava.tree.low.*;
 import com.myjava.utils.TreeUtil;
 import org.junit.Test;
 

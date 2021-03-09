@@ -71,4 +71,47 @@ public  class TreeUtil {
         List<List<Integer>> lists = this.treeToList(treeNode);
         System.out.println(lists);
     }
+
+
+    public void printTreeContainBlank(TreeNode treeNode){
+        List<List<Integer>> lists = this.treeToListContainBlank(treeNode);
+        System.out.println(lists);
+    }
+
+
+    /**
+     *
+     * 方法有问题,还需修理
+     * @param root
+     * @return
+     */
+    public List<List<Integer>> treeToListContainBlank(TreeNode root) {
+        if (root == null) {
+            return Collections.emptyList();
+        }
+        Queue queue = new LinkedList();
+        queue.offer(root);
+        List<List<Integer>> result = new ArrayList();
+        while (!queue.isEmpty()) {
+            List<Integer> list = new ArrayList<>();
+            int length = queue.size();
+            for (int i=0; i< length; i++) {
+                TreeNode node = (TreeNode)queue.poll();
+                if (node != null){
+                    list.add(node.val);
+                    queue.offer(node.left);
+                    queue.offer(node.right);
+                }else{
+                    list.add(null);
+                }
+
+
+            }
+            if (!list.isEmpty()){
+                result.add(list);
+            }
+        }
+        return result;
+    }
+
 }

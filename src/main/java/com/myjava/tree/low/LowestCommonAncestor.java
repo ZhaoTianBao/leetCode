@@ -1,4 +1,4 @@
-package com.myjava.tree;
+package com.myjava.tree.low;
 
 import com.myjava.common.TreeNode;
 import org.omg.CORBA.PUBLIC_MEMBER;
