@@ -289,5 +289,23 @@ public class TreeTest {
         System.out.println(univalTree);
     }
 
+    @Test
+    public void test993(){
+        String str = "[1,2,3,null,4,null,5]";
+        TreeNode treeNode = new TreeUtil().listToTree(str);
+        boolean flag = new IsCousins().isCousins(treeNode,5,4);
+        System.out.println(flag);
+    }
+
+
+    @Test
+    public void test1022(){
+        String str = "[1,0,1,0,1,0,1]";
+        TreeNode treeNode = new TreeUtil().listToTree(str);
+        int i = new SumRootToLeaf().sumRootToLeaf(treeNode);
+        System.out.println(i);
+    }
+
+
 
 }
