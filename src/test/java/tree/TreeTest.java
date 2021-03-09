@@ -1,6 +1,7 @@
 package tree;
 
 import com.myjava.common.TreeNode;
+import com.myjava.tree.IsCousins;
 import com.myjava.tree.SumRootToLeaf;
 import com.myjava.tree.low.*;
 import com.myjava.utils.TreeUtil;
