@@ -36,6 +36,7 @@ public class LuckyTest {
         Iterator<String> iterator = set.iterator();
         System.out.println("================>");
         System.out.println("================>");
+
         while (iterator.hasNext()){
             System.out.println("======>中奖: "+iterator.next());
         }
