@@ -86,8 +86,6 @@ public class MiddleTreeTest {
 
     @Test
     public void test113(){
-
-
         String treeStr = "[5,4,8,11,null,13,4,7,2,null,null,5,1]";
         TreeNode root = new TreeUtil().listToTree(treeStr);
         List<List<Integer>> lists = new PathSum().pathSum(root,22);
