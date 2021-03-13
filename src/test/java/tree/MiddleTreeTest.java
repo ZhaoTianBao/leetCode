@@ -1,8 +1,10 @@
 package tree;
 
+import com.myjava.common.Node;
 import com.myjava.common.TreeNode;
 import com.myjava.tree.middle.*;
 import com.myjava.utils.TreeUtil;
+import javafx.geometry.Pos;
 import org.junit.Test;
 
 import java.util.List;
@@ -92,6 +94,52 @@ public class MiddleTreeTest {
         System.out.println(lists);
 
 
+    }
+
+
+    @Test
+    public void test114(){
+        String treeStr = "[1,2,5,3,4,null,6]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        new Flatten().flatten(root);
+
+
+    }
+
+
+    @Test
+    public void test116(){
+        String treeStr = "[1,2,3,4,5,6,7]";
+
+    }
+    @Test
+    public void test117(){
+        String treeStr = "[1,2,3,4,5,6,7]";
+
+    }
+
+    @Test
+    public void test123(){
+        String treeStr = "[1,2,3]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        int i = new SumNumbers().sumNumbers(root);
+        System.out.println(i);
+    }
+
+    @Test
+    public void test144(){
+        String treeStr = "[1,null,2,3]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        List<Integer> integers = new PreorderTraversal().preorderTraversal(root);
+        System.out.println(integers);
+    }
+
+    @Test
+    public void test145(){
+        String treeStr = "[1,null,2,3]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        List<Integer> integers = new PostorderTraversal().postorderTraversal(root);
+        System.out.println(integers);
     }
 
 
