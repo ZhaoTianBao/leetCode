@@ -1,10 +1,8 @@
 package tree;
 
-import com.myjava.common.Node;
 import com.myjava.common.TreeNode;
 import com.myjava.tree.middle.*;
 import com.myjava.utils.TreeUtil;
-import javafx.geometry.Pos;
 import org.junit.Test;
 
 import java.util.List;
@@ -142,6 +140,46 @@ public class MiddleTreeTest {
         System.out.println(integers);
     }
 
+
+
+    @Test
+    public void test173(){
+        //  ["BSTIterator","next","next","hasNext","next","hasNext","next","hasNext","next","hasNext"]
+        //String treeStr = "[[[7,3,15,null,null,9,20]],[],[],[],[],[],[],[],[],[]]";
+        String treeStr = "[1,null,2,3]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        BSTIterator bstIterator = new BSTIterator(root);
+        while (bstIterator.hasNext()){
+            System.out.println(bstIterator.next());
+        }
+    }
+
+
+    @Test
+    public void test199(){
+        //  ["BSTIterator","next","next","hasNext","next","hasNext","next","hasNext","next","hasNext"]
+        //String treeStr = "[[[7,3,15,null,null,9,20]],[],[],[],[],[],[],[],[],[]]";
+        String treeStr = "[1,2,3,null,5,null,4]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        List<Integer> integers = new RightSideView().rightSideView(root);
+        System.out.println(integers);
+    }
+
+    @Test
+    public void test222(){
+        String treeStr = "[1,2,3,4,5,6]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        int i = new CountNodes().countNodes(root);
+        System.out.println(i);
+    }
+
+    @Test
+    public void test230(){
+        String treeStr = "[3,1,4,null,2]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        int i = new KthSmallest().kthSmallest(root, 1);
+        System.out.println(i);
+    }
 
 
 
