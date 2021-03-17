@@ -12,6 +12,7 @@ public class VolatileAtomicTest {
     //结果小于等于 10010
     public static  void increase(){
         num++;
+
     }
 
 
