@@ -181,6 +181,21 @@ public class MiddleTreeTest {
         System.out.println(i);
     }
 
+    @Test
+    public void test236(){
+        String treeStr = "[3,5,1,6,2,0,8,null,null,7,4]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        TreeNode treeNode = new LowestCommonAncestor().lowestCommonAncestor(root, new TreeNode(5), new TreeNode(1));
+        new TreeUtil().printTree(treeNode);
+    }
+
+
+    @Test
+    public void test105(){
+        int[] tree = new int[]{3,9,20,15,7};
+        int[] tree2 = new int[]{9,3,15,20,7};
+        TreeNode treeNode = new BuildTree().buildTree(tree, tree2);
+    }
 
 
 
