@@ -38,6 +38,7 @@ public class buildTreeInAfter {
      */
    
     //存储
+
     int post_idx;
     int[] postorder;
     int[] inorder;
