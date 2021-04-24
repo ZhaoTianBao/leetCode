@@ -18,6 +18,7 @@ public class NettySimple {
 
     public static void main(String[] args) throws InterruptedException {
 
+
         //创立2个线程组，boss 含有子线程个数为cpu核数 的 2倍
         //bossGroup 只处理连接请求
         //workerGroup 真正处理客户端业务
