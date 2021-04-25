@@ -193,12 +193,6 @@ public class MiddleTreeTest {
 
     @Test
     public void test105(){
-        int[] tree = new int[]{3,9,20,15,7};
-        int[] tree2 = new int[]{9,3,15,20,7};
-        TreeNode treeNode = new BuildTree().buildTree(tree, tree2);
-    }
-    @Test
-    public void test105(){
         int[] str = new int[]{3,9,20,15,7};
         int[] str2 = new int[]{9,3,15,20,7};
         TreeNode tree = new BuildTree().buildTree(str, str2);

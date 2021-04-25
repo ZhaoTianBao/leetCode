@@ -13,7 +13,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
 // netty 关键代码  3行
-public class NettySimple {
+public class NettyServerSimple {
 
 
     public static void main(String[] args) throws InterruptedException {

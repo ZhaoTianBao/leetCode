@@ -185,7 +185,15 @@ public class BuildTree {
     //容易写错啊preorder_left inorder_left
 
 
-
+    public TreeNode buildTreeSuccess(int[] preorder,int[] inorder){
+        int n = preorder.length;
+        indexMap = new HashMap<Integer, Integer>();
+        for (int i = 0; i < n; i++) {
+            indexMap.put(inorder[i], i);
+        }
+        return myBuildTree(preorder,  0, n - 1,
+                inorder,0, n - 1);
+    }
 
 
 }
