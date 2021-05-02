@@ -29,7 +29,8 @@ public class NettyServerSimple {
         //创建服务器启动对象  1 行  创建netty服务端
         ServerBootstrap bootstrap = new ServerBootstrap();
         //配置参数 链式编程   2 netty服务端绑定参数 如2个线程池
-        bootstrap.group(bossGroup,workerGroup) //设置2个线程组
+        // 链式编程返回  赋值到 bootstrap 内各种属性
+        bootstrap.group(bossGroup,workerGroup) //设置2个线程组   netty客户端绑定2个线程池
                 .channel(NioServerSocketChannel.class)//使用NioSocketChannel作为服务器通道实现
                 .option(ChannelOption.SO_BACKLOG,1024)//初始化服务器处理连接队列，一次处理1个，其他放入队列等待
                 .childHandler(new ChannelInitializer<SocketChannel>() {
@@ -40,9 +41,12 @@ public class NettyServerSimple {
                         socketChannel.pipeline().addLast(new NettyServerHandler());
                     }
                 });
+        //1，2参数 赋值而已
         System.out.println("。。。。netty 启动。。。。");
+        // 3 bind 为关键地方
         //    sync异步启动    3 绑定端口
         ChannelFuture sync = bootstrap.bind(9000).sync();
+
 
 
     }
