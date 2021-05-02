@@ -27,6 +27,7 @@ public class DirectMemoryTest {
 
 
     public static void directAccess(){
+
         long startTime = System.currentTimeMillis();
         //分配直接内存
         ByteBuffer buffer = ByteBuffer.allocateDirect(1000);
