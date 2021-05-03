@@ -33,6 +33,7 @@ public class DirectMemoryTest {
         ByteBuffer buffer = ByteBuffer.allocateDirect(1000);
         for (int i = 0; i < 100000; i++){
             for (int j = 0; j < 200 ; j++){
+
                 buffer.putInt(j);
             }
             buffer.flip();
