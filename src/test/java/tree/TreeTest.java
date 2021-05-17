@@ -21,6 +21,7 @@ public class TreeTest {
     public void test100(){
 
 
+
 //        TreeNode a = new TreeNode(1,new TreeNode(2),new TreeNode(3));
 //        TreeNode b = new TreeNode(1,new TreeNode(2),new TreeNode(3));
         TreeNode p = new TreeUtil().listToTree("[1,2,3]");
