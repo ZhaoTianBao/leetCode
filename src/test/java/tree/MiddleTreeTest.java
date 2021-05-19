@@ -201,6 +201,13 @@ public class MiddleTreeTest {
         new TreeUtil().printTree(tree2);
     }
 
+    @Test
+    public void test337(){
+        String treeStr = "[3,2,3,null,3,null,1]";
+        TreeNode root = new TreeUtil().listToTree(treeStr);
+        int rob = new Rob().rob(root);
+        System.out.println(rob);
+    }
 
 
 }
