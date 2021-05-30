@@ -8,6 +8,13 @@
     <artifactId>leetCode</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- 不用每次设置setting java compile 1.8 -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
     <dependencies>
     <!-- https://mvnrepository.com/artifact/junit/junit -->
     <dependency>
@@ -23,6 +30,30 @@
             <artifactId>netty-all</artifactId>
             <version>4.1.24.Final</version>
         </dependency>
+
+        <!-- 2pc -->
+        <!-- https://mvnrepository.com/artifact/com.atomikos/atomikos-util -->
+        <dependency>
+            <groupId>com.atomikos</groupId>
+            <artifactId>transactions-jdbc</artifactId>
+            <version>4.0.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>javax.transaction-api</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <!-- 2pc -->
+
+
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.0.8</version>
+        </dependency>
+
 
     </dependencies>
 </project>
