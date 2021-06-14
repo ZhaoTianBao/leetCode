@@ -48,6 +48,8 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
         String logoutMsg = " [客户端] "+ channel.remoteAddress()+" 下线了 " + sdf.format(new Date()) + "\n";
         channelGroup.writeAndFlush(logoutMsg);
         System.out.println("当前还在线channel 数量size "+channelGroup.size());
+
+
     }
 
 
