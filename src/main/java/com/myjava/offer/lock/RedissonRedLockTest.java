@@ -21,6 +21,7 @@ public class RedissonRedLockTest {
         String path = "redis://localhost:6379";
         config.useSingleServer().setAddress(path).setDatabase(0);
 
+
         //redisson 客户端实例
         // 这里需要自已实例化不网redis实例的redisson客户端连接，
         //这里只是伪代码用一个redison客 户端简化了
