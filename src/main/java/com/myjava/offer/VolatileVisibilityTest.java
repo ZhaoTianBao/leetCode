@@ -24,6 +24,7 @@ public class VolatileVisibilityTest {
             }
         }).start();
 
+
         Thread.sleep(2000);
 
         new Thread(new Runnable() {
