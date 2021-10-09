@@ -37,6 +37,7 @@ public class VolatileVisibilityTest {
 
 
     public static void change(){
+        
         System.out.println("--->prepare data start");
         initFlag = true;
         System.out.println("--->prepare data start");
