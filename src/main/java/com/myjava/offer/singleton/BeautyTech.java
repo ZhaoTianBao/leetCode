@@ -15,6 +15,7 @@ public class BeautyTech {
 //        return beautyTech;
 //    }
 
+
     public static synchronized BeautyTech BeautyTech(){
         if (null == beautyTech){
             beautyTech = new BeautyTech();
