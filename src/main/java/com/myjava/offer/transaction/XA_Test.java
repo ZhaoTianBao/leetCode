@@ -42,6 +42,7 @@ public class XA_Test {
             String sql1 = "insert into user(name) VALUES('zhangsan')";
             PreparedStatement ps1 = conn1.prepareStatement(sql1);
             ps1.execute();
+            //标记 ps1整个事务 结束，后续要是再执行sql，会报错
             rm1.end(xid1,XAResource.TMSUCCESS);
             //执行rm2的事务分支
             //tm生成rm1事务分支id

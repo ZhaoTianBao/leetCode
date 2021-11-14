@@ -24,6 +24,7 @@ public class VolatileVisibilityTest {
             }
         }).start();
 
+
         Thread.sleep(2000);
 
         new Thread(new Runnable() {
@@ -37,6 +38,7 @@ public class VolatileVisibilityTest {
 
 
     public static void change(){
+        
         System.out.println("--->prepare data start");
         initFlag = true;
         System.out.println("--->prepare data start");
