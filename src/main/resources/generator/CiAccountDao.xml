@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="generate.CiAccountDao">
+  <resultMap id="BaseResultMap" type="generate.CiAccount">
+    <!--@mbg.generated-->
+    <id column="id" jdbcType="SMALLINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="number" jdbcType="VARCHAR" property="number" />
+    <result column="status" jdbcType="BOOLEAN" property="status" />
+    <result column="amount" jdbcType="DOUBLE" property="amount" />
+    <result column="date" jdbcType="DATE" property="date" />
+    <result column="type" jdbcType="BOOLEAN" property="type" />
+    <result column="isDelete" jdbcType="BOOLEAN" property="isdelete" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `name`, `number`, `status`, amount, `date`, `type`, isDelete
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Short" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from ci_account
+    where id = #{id,jdbcType=SMALLINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Short">
+    <!--@mbg.generated-->
+    delete from ci_account
+    where id = #{id,jdbcType=SMALLINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="generate.CiAccount" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into ci_account (`name`, `number`, `status`, 
+      amount, `date`, `type`, isDelete
+      )
+    values (#{name,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, #{status,jdbcType=BOOLEAN}, 
+      #{amount,jdbcType=DOUBLE}, #{date,jdbcType=DATE}, #{type,jdbcType=BOOLEAN}, #{isdelete,jdbcType=BOOLEAN}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="generate.CiAccount" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into ci_account
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="number != null">
+        `number`,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="date != null">
+        `date`,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="isdelete != null">
+        isDelete,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=BOOLEAN},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=DOUBLE},
+      </if>
+      <if test="date != null">
+        #{date,jdbcType=DATE},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=BOOLEAN},
+      </if>
+      <if test="isdelete != null">
+        #{isdelete,jdbcType=BOOLEAN},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="generate.CiAccount">
+    <!--@mbg.generated-->
+    update ci_account
+    <set>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        `number` = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=BOOLEAN},
+      </if>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=DOUBLE},
+      </if>
+      <if test="date != null">
+        `date` = #{date,jdbcType=DATE},
+      </if>
+      <if test="type != null">
+        `type` = #{type,jdbcType=BOOLEAN},
+      </if>
+      <if test="isdelete != null">
+        isDelete = #{isdelete,jdbcType=BOOLEAN},
+      </if>
+    </set>
+    where id = #{id,jdbcType=SMALLINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="generate.CiAccount">
+    <!--@mbg.generated-->
+    update ci_account
+    set `name` = #{name,jdbcType=VARCHAR},
+      `number` = #{number,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=BOOLEAN},
+      amount = #{amount,jdbcType=DOUBLE},
+      `date` = #{date,jdbcType=DATE},
+      `type` = #{type,jdbcType=BOOLEAN},
+      isDelete = #{isdelete,jdbcType=BOOLEAN}
+    where id = #{id,jdbcType=SMALLINT}
+  </update>
+</mapper>
