@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="generate.CiAccountInfoDao">
+  <resultMap id="BaseResultMap" type="generate.CiAccountInfo">
+    <!--@mbg.generated-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="iid" jdbcType="INTEGER" property="iid" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="buId" jdbcType="SMALLINT" property="buid" />
+    <result column="billNo" jdbcType="VARCHAR" property="billno" />
+    <result column="billType" jdbcType="VARCHAR" property="billtype" />
+    <result column="billDate" jdbcType="DATE" property="billdate" />
+    <result column="accId" jdbcType="INTEGER" property="accid" />
+    <result column="payment" jdbcType="DOUBLE" property="payment" />
+    <result column="wayId" jdbcType="INTEGER" property="wayid" />
+    <result column="settlement" jdbcType="VARCHAR" property="settlement" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="transType" jdbcType="INTEGER" property="transtype" />
+    <result column="transTypeName" jdbcType="VARCHAR" property="transtypename" />
+    <result column="isDelete" jdbcType="BOOLEAN" property="isdelete" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, iid, `uid`, buId, billNo, billType, billDate, accId, payment, wayId, settlement, 
+    remark, transType, transTypeName, isDelete
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from ci_account_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from ci_account_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="generate.CiAccountInfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into ci_account_info (iid, `uid`, buId, 
+      billNo, billType, billDate, 
+      accId, payment, wayId, 
+      settlement, remark, transType, 
+      transTypeName, isDelete)
+    values (#{iid,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{buid,jdbcType=SMALLINT}, 
+      #{billno,jdbcType=VARCHAR}, #{billtype,jdbcType=VARCHAR}, #{billdate,jdbcType=DATE}, 
+      #{accid,jdbcType=INTEGER}, #{payment,jdbcType=DOUBLE}, #{wayid,jdbcType=INTEGER}, 
+      #{settlement,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{transtype,jdbcType=INTEGER}, 
+      #{transtypename,jdbcType=VARCHAR}, #{isdelete,jdbcType=BOOLEAN})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="generate.CiAccountInfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into ci_account_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="iid != null">
+        iid,
+      </if>
+      <if test="uid != null">
+        `uid`,
+      </if>
+      <if test="buid != null">
+        buId,
+      </if>
+      <if test="billno != null">
+        billNo,
+      </if>
+      <if test="billtype != null">
+        billType,
+      </if>
+      <if test="billdate != null">
+        billDate,
+      </if>
+      <if test="accid != null">
+        accId,
+      </if>
+      <if test="payment != null">
+        payment,
+      </if>
+      <if test="wayid != null">
+        wayId,
+      </if>
+      <if test="settlement != null">
+        settlement,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="transtype != null">
+        transType,
+      </if>
+      <if test="transtypename != null">
+        transTypeName,
+      </if>
+      <if test="isdelete != null">
+        isDelete,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="iid != null">
+        #{iid,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="buid != null">
+        #{buid,jdbcType=SMALLINT},
+      </if>
+      <if test="billno != null">
+        #{billno,jdbcType=VARCHAR},
+      </if>
+      <if test="billtype != null">
+        #{billtype,jdbcType=VARCHAR},
+      </if>
+      <if test="billdate != null">
+        #{billdate,jdbcType=DATE},
+      </if>
+      <if test="accid != null">
+        #{accid,jdbcType=INTEGER},
+      </if>
+      <if test="payment != null">
+        #{payment,jdbcType=DOUBLE},
+      </if>
+      <if test="wayid != null">
+        #{wayid,jdbcType=INTEGER},
+      </if>
+      <if test="settlement != null">
+        #{settlement,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="transtype != null">
+        #{transtype,jdbcType=INTEGER},
+      </if>
+      <if test="transtypename != null">
+        #{transtypename,jdbcType=VARCHAR},
+      </if>
+      <if test="isdelete != null">
+        #{isdelete,jdbcType=BOOLEAN},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="generate.CiAccountInfo">
+    <!--@mbg.generated-->
+    update ci_account_info
+    <set>
+      <if test="iid != null">
+        iid = #{iid,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        `uid` = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="buid != null">
+        buId = #{buid,jdbcType=SMALLINT},
+      </if>
+      <if test="billno != null">
+        billNo = #{billno,jdbcType=VARCHAR},
+      </if>
+      <if test="billtype != null">
+        billType = #{billtype,jdbcType=VARCHAR},
+      </if>
+      <if test="billdate != null">
+        billDate = #{billdate,jdbcType=DATE},
+      </if>
+      <if test="accid != null">
+        accId = #{accid,jdbcType=INTEGER},
+      </if>
+      <if test="payment != null">
+        payment = #{payment,jdbcType=DOUBLE},
+      </if>
+      <if test="wayid != null">
+        wayId = #{wayid,jdbcType=INTEGER},
+      </if>
+      <if test="settlement != null">
+        settlement = #{settlement,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="transtype != null">
+        transType = #{transtype,jdbcType=INTEGER},
+      </if>
+      <if test="transtypename != null">
+        transTypeName = #{transtypename,jdbcType=VARCHAR},
+      </if>
+      <if test="isdelete != null">
+        isDelete = #{isdelete,jdbcType=BOOLEAN},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="generate.CiAccountInfo">
+    <!--@mbg.generated-->
+    update ci_account_info
+    set iid = #{iid,jdbcType=INTEGER},
+      `uid` = #{uid,jdbcType=INTEGER},
+      buId = #{buid,jdbcType=SMALLINT},
+      billNo = #{billno,jdbcType=VARCHAR},
+      billType = #{billtype,jdbcType=VARCHAR},
+      billDate = #{billdate,jdbcType=DATE},
+      accId = #{accid,jdbcType=INTEGER},
+      payment = #{payment,jdbcType=DOUBLE},
+      wayId = #{wayid,jdbcType=INTEGER},
+      settlement = #{settlement,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      transType = #{transtype,jdbcType=INTEGER},
+      transTypeName = #{transtypename,jdbcType=VARCHAR},
+      isDelete = #{isdelete,jdbcType=BOOLEAN}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
